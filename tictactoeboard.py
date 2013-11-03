@@ -24,6 +24,8 @@ class TicTacToe(object):
         cells = 0
         board = self.board
         player = self.player
+        # Brute force algorithm - check rows, then columns, then diagonals
+        # Check rows
         for row in range(0, 3):
             logging.debug('Checking row %d' % row)
             for col in range(0, 3):
@@ -36,6 +38,7 @@ class TicTacToe(object):
                 break
             cells = 0
 
+        # Check columns
         for col in range(0, 3):
             logging.debug('Checking column %d' % col)
             for row in range(0, 3):
@@ -48,6 +51,7 @@ class TicTacToe(object):
                 break
             cells = 0
 
+        # Check diagonals
         if board[0][0] == player and board[1][1] == player and board[2][2] == player or board[0][2] == player and board[1][1] == player and board[2][0] == player:
             won = True
         for row in range(0, 3):
