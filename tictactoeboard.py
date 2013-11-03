@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO)
 
 class TicTacToe(object):
     """
-    Calculate the results of a TacTacToe game given a
+    Calculate the results of a TicTacToe game given a
     player ID and a 2-dimensional array containing the
     cells that the player occupies.
     Currently supports a 3x3 board and needs error
